@@ -7,7 +7,6 @@ public class Client {
 
     public static void main(String[] args) throws IOException {
         try (Socket socket = new Socket("localhost", 8888)) {
-            System.out.println("Client connected: " + socket.getInetAddress());
             Scanner scanner = new Scanner(System.in);
             PrintStream output = new PrintStream(socket.getOutputStream());
 
